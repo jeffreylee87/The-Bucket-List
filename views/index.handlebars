@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <!-- Post it Note #1 -->
+
+  <div class="post-it-note yellow" id="note-1">
+    <div class="pin blue"></div>
+     <h5 class="text-center">
+      <i class="fab fa-bitbucket"></i>The Bucket List</h5>
+    <br>
+    <p class="text-center">Click the pen to add to the list</p>
+    <div class="searchbox">
+      <form class="create" id="search-box">
+        <div class="form-group">
+          <input type="text" autocomplete="off" id="item" placeholder="Add to the list....">
+          <button class="btn btn-outline-dark" type="submit">Add Item</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Post it Note #2 -->
+
+  <div class="post-it-note red" id="note-2">
+    <div class="pin yellow"></div>
+   
+    <p>Goals:</p>
+    <ul>
+      {{#each tasks}} {{#unless completed}}
+      <li>
+        {{name}}
+        <span class="change-complete " data-id="{{id}}" data-comp="true">
+          <i class="fas fa-check"></i>
+        </span>
+      </li>
+      {{/unless}} {{/each}}
+    </ul>
+  </div>
+  <!-- Post it Note #3 -->
+
+  <div class="post-it-note blue" id="note-3">
+    <div class="pin red"></div>
+
+    <p>Completed:</p>
+    <ul>
+      {{#each tasks}} {{#if completed}}
+      <li>
+        {{name}}
+        <span class="delete fas fa-poo" data-id="{{id}}"></span>
+      </li>
+
+      {{/if}} {{/each}}
+    </ul>
+  </div>
+  
+  <!-- Polaroid #2 -->
+
+  <figure class="polaroid" id="picture-2">
+    <div class="pin blue"></div>
+    
+
+    <figcaption>
+      <br>
+      All the things I want to do<br>
+       before I'm gone
+    </figcaption>
+  </figure>
+</div>

@@ -1,0 +1,202 @@
+/* * {
+    border: 1px solid red !important;
+} */
+
+
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    padding: 20px;
+    margin: 0;
+    background-color: #e9e9e9;
+    background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/08/Cool-Desktop-Backgrounds-Wallpapers.jpg);
+    background-repeat: repeat;
+    color: #000;
+  }
+  
+  
+  .wrapper {
+    position: relative;
+    width: 80%;
+    height: 700px;
+    border: 15px solid #130d02;
+    margin: 0 auto;
+    background-color: #ad6908;
+    background-image: url(https://sites.google.com/site/carolinacsfirst/unit/home/websites/corkboard.jpg);
+    background-repeat: repeat;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+  }
+  
+  /*
+              TASK 2) Change position of CSS elements.         *********************************************************************
+              Hey again! We're now in CSS. You'll see below how all the elements stack up together. Right now, changing their left, top, right or bottom values further down will have no effect. If you change the below to position-relative, all the elements will move around relative to each other. But with position absolute CSS, each item is on its own layer and isnt affected by other things. Make sure you change back to 'position: absolute;' afterwards.
+          */
+  .post-it-note,.polaroid {
+    position: absolute;
+    box-shadow: 3px 3px 2px rgba(0,0,0,.4);
+  }
+  
+  /* Basic styles for the post it note*/
+  .post-it-note {
+    width: 360px;
+    height: 440px;
+    padding: 20px;
+    font-family: 'Rock Salt', cursive;
+    background-color: #e8dd62;
+  }
+  
+  /* Colour classes for the post it notes */
+  .yellow {
+    background-color: #e8dd62;
+  }
+  
+  .red {
+    background-color: #d23838;
+  }
+  
+  .blue {
+    background-color: #5c97ee;
+  }
+  
+  /* Font styling for headings and text inside the post it notes */
+  p,h1,h2,h3,h4,h5 {
+    margin-top: 0;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  /* Each <figure> will ask as a polaroid so we can just style the <figure> without a class name */
+  .polaroid {
+    padding: 10px;
+    margin: 0;
+    background: #FFF;
+    display: inline-block;
+  }
+  
+  .polaroid img {
+    max-width: 250px;
+  }
+  
+  .polaroid figcaption {
+    font-family: 'Rock Salt', cursive;
+  }
+  
+  /* The drawing pins (can use the same colour classes above) */
+  .pin {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+  /* Make it work in Safari/Chrome */
+    box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+    border-radius: 20px;
+  }
+  
+  
+  #note-1 {
+    top: 2%;
+    left: 2%;
+  }
+  
+  #note-2 {
+    top: 5%;
+    right: 2%;
+  }
+  
+  /*
+              TASK 3) Move the blue post it not over the the left so it's not being hidden by the polaroid.
+    ************************************************************************
+              #note-3 is the id on the blue poloaroid.  You can see that its positions 10% off the bottom and 16% from the left. The 10% and 16% are refering the the width and height of the container #note-3 sites in which is the .wrapper (cork board). So of you wanted to move the post it note closer to the left try reducing the left % to say 10%.
+          */
+  #note-3 {
+    bottom: 6%;
+    left: 18%;
+    transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+  /* Make it work in IE 9 */
+    -webkit-transform: rotate(2deg);
+  /* Make it work in Safari and Chrome */
+  }
+  
+
+  #picture-2 {
+    bottom: 10%;
+    right: 10%;
+    transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+  /* Make it work in IE 9 */
+    -webkit-transform: rotate(-3deg);
+  /* Make it work in Safari and Chrome */
+  }
+  
+  /* input expand for typing */
+  form#search-box {
+    position: absolute;
+    z-index: 9999;
+    width: 80%;
+}
+input {
+    outline: none;
+}
+input[type=text] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+input[type=text] {
+    background: url(https://png.icons8.com/small/1x/ball-point-pen.png) no-repeat 6px center;
+    border: solid 1px black;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+#search-box input[type=text] {
+    width: 10px;
+    padding-left:10px;
+    color: transparent;
+    cursor: pointer;
+    height:20px;
+}
+/* #search-box input[type=text]:hover {
+    background-color: #fff;
+} */
+#search-box input[type=text]:focus {
+    width: 100%;
+    padding-left: 32px;
+    color: #000;
+    /* background-color: #fff; */
+    cursor: auto;
+}
+#search-box input:-moz-placeholder {
+    color: transparent;
+}
+#search-box input::-webkit-input-placeholder {
+    color: transparent;
+}
