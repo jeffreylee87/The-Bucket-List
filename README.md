@@ -2,7 +2,7 @@
 
 Description:
 
-Full-Stack developement app that basically allows you to pen items that you have on your bucket list. I used Node, Express, MySQL, Handlebars, homemade ORM, and it was deployed on Heroku with the assistance of JawsDB.  This was the first assignment that we utilized all these tools together and we followed the MVC design pattern. 
+Full-Stack developement app that basically allows you to pen items that you have on your bucket list. I used Node, Express, MySQL, Handlebars, homemade ORM, and it was deployed on Heroku with the assistance of JawsDB.  This was the first assignment that we utilized all these tools together and I followed the MVC design pattern. 
 
 
 Usage: 
