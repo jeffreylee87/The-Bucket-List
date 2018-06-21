@@ -18,8 +18,8 @@ if(process.env.JAWSDB_URL){
   
     host: "localhost",
     user: "root",
-    password: "",
-    database: "blist_db"
+    password: "forsureski",
+    database: "forsure"
   });
 };
 // Make connection.

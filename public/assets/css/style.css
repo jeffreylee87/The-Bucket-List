@@ -119,6 +119,7 @@
   #note-2 {
     top: 5%;
     right: 2%;
+    overflow: scroll
   }
   
   /*
@@ -134,6 +135,7 @@
   /* Make it work in IE 9 */
     -webkit-transform: rotate(2deg);
   /* Make it work in Safari and Chrome */
+  overflow: scroll;
   }
   
 
