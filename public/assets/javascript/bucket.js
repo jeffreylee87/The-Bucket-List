@@ -55,7 +55,7 @@ $(function() {
 	  );
 
 	  }else{
-    alert("Type your info in, you don't want to be alone forever.")
+    alert("Type in your dreams and hopes!!!")
 }  
 	});
 
