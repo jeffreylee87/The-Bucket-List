@@ -23,7 +23,19 @@ $(function() {
 	$(".create").on("submit", function(event) {
 	  // Make sure to preventDefault on a submit event.
 	  event.preventDefault();
-  
+
+	  //validator
+  		function validateForm(){
+          var isValid = true;
+          $(".form-control").each(function(){
+              if($(this).val()===""){
+                  isValid = false;
+              }
+          })
+          return isValid;
+      };
+
+ if(validateForm()){
 	  var newItem = {
 		name: $("#item").val().trim(),
 		
@@ -41,6 +53,10 @@ $(function() {
 		  location.reload();
 		}
 	  );
+
+	  }else{
+    alert("Type your info in, you don't want to be alone forever.")
+}  
 	});
 
 	//delete button
