@@ -110,6 +110,9 @@
     border-radius: 20px;
   }
   
+  .mainButt {
+    margin-top: 2%;
+  }
   
   #note-1 {
     top: 2%;
